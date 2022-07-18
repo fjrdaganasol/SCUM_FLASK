@@ -1,0 +1,216 @@
+#video {
+    background-color: aquamarine;
+    border-radius: 10px;
+    position: relative;
+    width: 56%;
+    height: 450px;
+    margin-bottom: 10px;
+    float: left;
+    margin-right: .1%;
+}
+
+
+#vid_cont {
+    background-color: lightseagreen;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    bottom: 5px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+#vidnav_cont {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;  
+}
+
+
+ #vidnav_cont a{
+    background-color: lightslategray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0px;
+    width: 14.285%;
+    justify-content: space-evenly;
+    justify-items: center;
+    text-align: center;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float: left;
+ }
+ 
+ #vidnav_cont a:active{
+     background-color: blanchedalmond;   
+ }
+
+
+ .dropbtn {
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ border-top-left-radius: 10px;
+ z-index: 2;
+ background-color: #3498DB;
+ color: white;
+ padding: 13px;
+ font-size: 15px;
+ border: none;
+ cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+ background-color: #2980B9;
+}
+
+.dropdown {
+ margin-left: 5px;
+ margin-top: 5px;
+ position: absolute;
+ display: inline-block;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 100px;
+ overflow: auto;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+.dropdown a:hover {background-color: #ddd; cursor:pointer;}
+
+.show {display: block;}
+
+.vfeed{
+    color: white;
+    width: 50%;
+    position: relative;
+    background-color: darkslategray;
+    float: left;
+    display: block;
+    height: 50%;
+    text-align: right;
+}
+
+#vf1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+}
+
+#vf2 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-left: 1px solid aquamarine;
+    border-bottom: 1px solid aquamarine;
+}
+
+#vf3 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 1px solid aquamarine;
+    border-top: 1px solid aquamarine;
+}
+
+#vf4 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid aquamarine;
+    border-top: 1px solid aquamarine;
+}
+
+.parent_cont_v {
+    background-color: #4d4d4d;
+    position: relative;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    margin: 5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-top: 6%;
+    padding: .3%;
+}
+
+@media only screen and (max-width: 940px) {
+    .parent_cont_v{
+        margin-top: 15%;
+        margin-left: 1%;
+        width: 98%;
+    }
+}
+
+
+
+#rf_details {
+    margin: 0px;
+}
+
+.row1_v{
+    position: relative;
+    padding: .5%;
+    height: 69%;
+    margin-bottom: 0px;
+    background-color: none;
+    z-index: 1;
+}
+
+.row2_v{
+    display:none;
+    position: relative;
+    display: block;
+    height: 31%;
+    padding: .5%;
+    margin-bottom: 0px;
+    padding: 5px;
+    padding-top: 0px;
+    border: 1px solid #4d4d4d;
+
+}
+
+h4 {
+    margin-top:5px;
+    text-align: center;
+}
+
+#video, #control_elem {
+    height: 520px;
+}
+
+#control_elem #start{
+    margin-top: 10px;
+}
+
+#elog_href{
+    color: aqua;
+    text-decoration: none;
+    transition: .2s;
+}
+
+#elog_href:hover{
+    color: darkturquoise;
+    transition: .1s;
+}

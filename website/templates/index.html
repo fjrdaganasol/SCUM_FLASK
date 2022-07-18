@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+<!--BLOCK OF CSS-->
+{% block relative_css %}
+    <link rel="stylesheet" href="static\home.css">
+{% endblock %}
+
+{% block content %}
+<div id="bodyid">
+    <div class="parent_cont_d">
+    <h2 class="navlbl">Dashboard</h2>
+    <div id="dash" onclick="redirectp(this)" class="navitem"><h3>Display all components</h3></div>
+    <h2 class="navlbl">Event Log Sessions</h2>
+    <div id="elog" onclick="redirectp(this)" class="navitem"><h3>View all sessions</h3></div>
+    <h2 class="navlbl">Video Stream</h2>
+    <div id="vstream" onclick="redirectp(this)" class="navitem"><h3>Display video stream of selected rooms</h3></div>
+</div>
+</div>
+<!--PARENT CONTAINER-->
+
+
+<script>
+    function redirectp(section){
+        if (section.id == "dash")
+            location.href = "/dashboard";
+        else if (section.id == "elog")
+            location.href = "/eventlog";
+        else if (section.id == "vstream")
+            location.href = "/videostream";
+    }
+</script>
+
+{% endblock %}
+
+
+
+
+    

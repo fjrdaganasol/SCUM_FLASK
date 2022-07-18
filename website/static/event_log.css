@@ -1,0 +1,74 @@
+
+#time_sched{
+    display: inline-block;
+    position: relative;
+    background-color: #990000;
+    text-align: center;
+    height: 100%;
+    padding: 7px;
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#ts_cont {
+    overflow-y: auto;
+    position: relative;
+    height: 100%;
+}
+
+#ts_cont table {
+  background-color: #dddddd;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: auto;
+  font-size: 16px;
+}
+
+#ts_cont td, th {
+    text-align: center;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#ts_cont tr:nth-child(even) {
+  background-color: white;
+}
+
+table tr th {
+  width: 2%;
+}
+
+table tr:hover{
+  color: #ff0000;
+}
+
+@media only screen and (max-width: 500px) {
+  #log{
+    width: 100%;
+  }
+  #ts_cont table{
+    font-size: 12px;
+  }
+}
+
+#tbllbl {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #ff0000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  color: white;
+}
+
+.parent_cont_e {
+  font-family: 20px;
+  top: 8%;
+  right: 5%;
+  left: 5%;
+  bottom: 5%;
+  position: absolute;
+}

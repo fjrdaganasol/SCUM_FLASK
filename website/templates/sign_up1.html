@@ -1,0 +1,121 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+
+<!--FORM CSS-->
+{% block relative_css %}
+<link rel="stylesheet" href="..\static\form.css">
+{% endblock %}
+
+{% block content %}
+<div class="alertcon" style="display: none">
+{% for newu in user.email %}
+    {% if request.form['email'] == newu %}
+    <div class="alert">
+        Email already exists.
+        <span class="closebtn">&times;</span>
+    </div>
+{% endif %}{% endfor %}
+
+
+<!--PARAMETERS' FILTER-->
+{% if request.form['email']|length < 4 %}
+<div class="alert">
+    Email must be greater than 3 characters.
+    <span class="closebtn">&times;</span>
+</div>
+
+{% elif request.form['firstName']|length < 2 %}
+<div class="alert">
+    First name must be greater than 1 character.
+    <span class="closebtn">&times;</span>
+</div>
+
+{% elif request.form['password1'] != request.form["password2"] %}
+<div class="alert">
+    Passwords does not match.
+    <span class="closebtn">&times;</span>
+</div>
+
+{% elif request.form['password1']|length < 8 %}
+<div class="alert">
+    Password must be at least 8 characters.
+    <span class="closebtn">&times;</span>
+</div>
+
+<!--SUCCESS MESSAGE-->
+{% else %}
+<div class="alert success">
+    Account successfully created.
+    <span class="closebtn">&times;</span>
+</div>
+{% endif %}
+
+<!--FORM CONTAINER-->
+<div class="form_div">
+    <form method="POST">
+        <h3 style="text-align: center">Sign Up</h3>
+
+        <!--EMAIL-->
+        <div class = "from-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email">
+        </div>
+
+        <!--FIRST NAME-->
+        <div class = "from-group">
+            <label for="firstName">First Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name">
+        </div>
+
+
+        <!--PASSWORD-->
+        <div class = "from-group">
+            <label for="password1">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password1"
+                name="password1"
+                placeholder="Enter Password">
+        </div>
+
+
+        <!--PASSWORD CONFIRM-->
+        <div class = "from-group">
+            <label for="password2">Password (Confirm)</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" class="submit_btn">Submit</button>
+    </form>
+</div>
+
+<script>
+    //INVALID INPUT MESSAGE
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    }
+</script>
+{% endblock %}
+

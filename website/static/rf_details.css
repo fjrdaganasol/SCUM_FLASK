@@ -1,0 +1,91 @@
+
+#rf_details {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #990000;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#rf_cont {
+    background-color: whitesmoke;
+    padding: 4px;
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#rf_cont p {
+    margin:0px;
+    padding: 10px;
+    display: inline-flex;
+    margin-bottom: 0px;
+    background-color: whitesmoke;
+    color: #990000;
+    padding-left: 10px;
+}
+
+
+.rfc {
+    background-color: whitesmoke;
+    display: block;
+    border-bottom: 1px solid white;
+}
+
+.labels {
+    width: 30%;
+    overflow-x: hidden;
+}
+.labels1 {
+    width: 70%;
+    overflow-x: auto;
+    position: relative;
+    text-align: center;
+    padding-left: 10px;
+}
+#rf1, #roomnum {
+    border-top-right-radius: 10px;
+}
+#rf4 {
+    border-bottom-right-radius: 10px;
+}
+
+#rf1, #roomnumlbl {
+    border-top-left-radius: 10px;
+}
+
+#rf4, #lastfilt1 {
+    border-bottom-left-radius: 10px;
+}
+
+#lastfilt {
+    border-bottom-right-radius: 10px;
+}
+#rf4{
+    border-bottom: #e60000;
+}
+
+@media only screen and (max-width: 500px) {
+    .labels{
+      width: 35%;
+      font-size: 14px;
+    }
+    .labels1{
+      font-size: 14px;
+      width:65%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+

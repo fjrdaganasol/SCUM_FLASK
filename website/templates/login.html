@@ -1,0 +1,75 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+
+<!--FORM CSS-->
+{% block relative_css %}
+<link rel="stylesheet" href="..\static\form.css">
+{% endblock %}
+
+<!--ACCOUNT AUTHENTICATOR-->
+{% block content %}
+<div style="display: none">
+
+    {% if user.is_authenticated %}
+    <div class="alert success">
+        Logged in successfully!
+      <span class="closebtn">&times;</span>
+    </div>
+
+    {% else %}
+    <div class="alert">
+        Invalid account!
+      <span class="closebtn">&times;</span>
+    </div>
+
+    {% endif %}
+</div>
+
+
+<!--FORM CONTAINER-->
+<div class="form_div">
+    <form method="POST">
+        <h3 style="text-align: center">Login</h3>
+
+        <!--EMAIL TEXTBOX-->
+        <div class = "from-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email">
+        </div>
+
+        <!--PASSWORD TEXTBOX-->
+        <div class = "from-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter first name">
+        </div>
+
+        <!--BUTTON SUBMIT-->
+        <button type="submit" class="submit_btn">Login</button>
+    </form>
+</div>
+
+
+<script>
+
+    //DISPLAY INVALID MESSAGE
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+    }
+</script>
+{% endblock %}

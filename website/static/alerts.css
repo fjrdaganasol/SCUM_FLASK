@@ -1,0 +1,31 @@
+
+.salert {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin-top:0px;
+    background-color: #ff751a;
+    color: white;
+    z-index: 5;
+    width: 100%;
+    position: sticky;
+    top:0px;
+    text-align: center;
+  }
+  
+  .sclosebtn {
+    margin-left: 15px;
+    color: white;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sclosebtn:hover {
+    color: black;
+  }
+  
+  #inlineb, .sclosebtn {
+      display: inline;
+  }

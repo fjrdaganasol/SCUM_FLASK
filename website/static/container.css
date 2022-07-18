@@ -1,0 +1,65 @@
+* {box-sizing: border-box}
+
+body{
+    min-width:300px;        /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:300px;            /* As IE6 ignores !important it will set width as 1000px; */
+}
+
+ @media only screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+.parent_cont{
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 0 0 1px #4d4d4d;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+
+.row1, .row2 {
+    background-color: #4d4d4d;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display:block;
+}
+
+@media only screen and (max-width: 940px) {
+    #video{
+        display: block;
+        width: 100%;
+    }
+    #control_elem{
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .parent_cont {
+        max-width: 100%;
+        width: 100%;
+
+    }
+    .row1, .row2{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+
+
+
+
+
+

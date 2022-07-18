@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="..\static\navbar.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block relative_css %}{% endblock %}
+  </head>
+  <body style="padding-bottom: 3%; background-color: gainsboro; ">
+    <nav class="navbar">
+      <div class="navbar_section">
+          <h3 id="webtitle">SCUM</h3>
+          {% if user.is_authenticated %}
+          <a class="nav_item" id="home" href="/">Home</a>
+          <a class="nav_item" id="logout" href="/logout">Logout</a>
+
+          {% else %}
+          <a class="nav_item" id="login" href="/login">Login</a>
+          <a class="nav_item" id="signUp" href="/signup">Sign Up</a>
+          {% endif %}
+
+      </div>
+    </nav>
+    <div id="showa" class="salert" style="display: none">
+    <p id="inlineb">ERROR ALERT</p>
+        <span class="sclosebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    
+    
+    <div class="container">{% block content %} {% endblock %}</div>
+    </script>
+  </body>
