@@ -49,6 +49,7 @@ def dashboard():
                 return render_template("dashboard.html", user=current_user)
         except Exception as e:
             print(e)
+
         if request.form.get('stat') == 'Started' and (request.form.get('interval') != None or request.form.get('interval') != ''):
             if request.form.get('uv_s') != 'on':
                 uv = 'off'
@@ -74,8 +75,8 @@ def dashboard():
         date = request.form.get('date_now')
         interval = request.form.get('interval')
 
-
-        if ((room == None or room == "") or (time == None or time == "") or (date == None or date == "") or (stat == None or stat == "") or ((uv == "off" and air == "off")) and (stat == "Started" or stat == None)):
+        print(room+ " ", time+ " ", stat+ " ", date+ " ", interval+ " ", uv+ " ", air+ " ")
+        if ((room == None or room == '') or (time == None or time == '') or (date == None or date == '') or (stat == None or stat == '') or (uv == '' and air == '')):
             return render_template("dashboard.html", user=current_user)
         
         new_rec = EventLog(user_id=current_user.id, uv=uv, air=air, room=room,
@@ -129,7 +130,7 @@ def videostream():
     uv1 = ""
     air1 = ""
     if request.method == 'POST':
-        if request.form.get('stat') == 'Started':
+        if request.form.get('stat') == 'Started' and (request.form.get('interval') != None or request.form.get('interval') != ''):
             if request.form.get('uv_s') != 'on':
                 uv1 = 'off'
             else:
@@ -154,9 +155,9 @@ def videostream():
         date = request.form.get('date_now')
         interval = request.form.get('interval')
 
-        if (room == "" or time == "" or date == "" or stat == "" or (uv1 == "off" and air1 == "off")) and (stat == "Started" or stat == ""):
+        if ((room == None or room == '') or (time == None or time == '') or (date == None or date == '') or (stat == None or stat == '') or (uv == '' and air == '')):
             return render_template("video_stream.html", user=current_user)
-        
+
         new_rec = EventLog(user_id=current_user.id, uv=uv1, air=air1, room=room,
                                 time=time, interval=interval, stat=stat, date=date)
         db.session.add(new_rec)
